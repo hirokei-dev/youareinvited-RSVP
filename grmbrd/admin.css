@@ -1,0 +1,308 @@
+/* ============================================================
+   ADMIN VIEW
+   ============================================================ */
+
+.admin-body {
+  align-items: stretch;
+  padding: 0;
+}
+
+/* ============================================================
+   PASSWORD GATE
+   ============================================================ */
+.admin-gate {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+.admin-gate[hidden] { display: none; }
+
+.admin-gate-box {
+  max-width: 380px;
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 40px -12px var(--shadow);
+}
+.admin-gate-box h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--heading);
+  margin-bottom: .5rem;
+}
+.admin-gate-box p {
+  font-size: .85rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.admin-gate-box input {
+  margin-bottom: .8rem;
+}
+.admin-gate-box .btn {
+  width: 100%;
+}
+.admin-gate-box .msg {
+  margin-top: .8rem;
+}
+
+/* Password field — polish on top of the shared input style */
+.admin-gate-box input[type=password] {
+  padding: 1rem 1.3rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  min-width: 260px;
+}
+.admin-gate-box input[type=password]::placeholder {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   LOADING OVERLAY
+   ============================================================ */
+.admin-loading {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+.admin-loading[hidden] { display: none; }
+.admin-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: adminSpin .8s linear infinite;
+}
+@keyframes adminSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+.admin-wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.admin-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--heading);
+  margin-bottom: .2rem;
+}
+.admin-sub {
+  font-size: .85rem;
+  color: var(--muted);
+  letter-spacing: .3px;
+}
+.admin-actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--heading);
+}
+
+/* ---- Stats ---- */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem 1.3rem;
+  transition: transform .15s, box-shadow .15s;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -8px var(--shadow);
+}
+.stat-label {
+  font-size: .7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+.stat-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  color: var(--heading);
+  font-weight: 500;
+  line-height: 1;
+}
+.stat-note {
+  font-size: .75rem;
+  color: var(--muted);
+  margin-top: .3rem;
+}
+.stat-yes .stat-value     { color: var(--toggle-on-label); }
+.stat-no .stat-value      { color: var(--error-text); }
+.stat-pending .stat-value { color: var(--muted); }
+
+/* ---- Progress bar ---- */
+.admin-progress {
+  margin-bottom: 2rem;
+}
+.admin-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.admin-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 0;
+  transition: width .4s ease;
+}
+
+/* ---- Filters ---- */
+.admin-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.admin-chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+.chip {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+}
+.chip:hover { border-color: var(--accent); color: var(--heading); }
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.admin-search { flex: 0 0 280px; max-width: 100%; }
+.admin-search input { width: 100%; }
+
+/* ---- Table ---- */
+.admin-table-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+.admin-table th,
+.admin-table td {
+  padding: .9rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.admin-table th {
+  font-size: .68rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--surface);
+}
+.admin-table tbody tr:hover { background: var(--surface); }
+.admin-table tbody tr:last-child td { border-bottom: 0; }
+
+.admin-empty {
+  text-align: center;
+  padding: 2rem !important;
+  color: var(--muted);
+}
+
+/* ---- Pills ---- */
+.pill {
+  display: inline-block;
+  font-size: .68rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: .25rem .7rem;
+  border-radius: 999px;
+}
+.pill-yes     { background: var(--success-bg); color: var(--success-text); }
+.pill-no      { background: var(--error-bg);   color: var(--error-text); }
+.pill-pending { background: var(--info-bg);    color: var(--info-text); }
+
+.admin-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: .75rem;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+  .admin-header { flex-direction: column; }
+  .admin-actions { width: 100%; }
+  .admin-actions .btn { flex: 1; }
+  .admin-search { flex: 1 1 100%; }
+  .stat-value { font-size: 1.8rem; }
+  .admin-table { font-size: .8rem; }
+  .admin-table th, .admin-table td { padding: .7rem .8rem; }
+  .admin-gate-box input[type=password] { min-width: 0; }
+}

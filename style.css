@@ -1,0 +1,353 @@
+/* ============================================================
+   BASE STYLES — colors come from themes.css via CSS variables
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+  transition: background .3s, color .3s;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(var(--dot) 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ---- Page wrapper keeps switcher + card centered together ---- */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 780px;
+}
+
+.card {
+  max-width: 780px;
+  width: 100%;
+  background: var(--card);
+  backdrop-filter: blur(2px);
+  border-radius: 32px;
+  box-shadow: 0 20px 40px -12px var(--shadow), 0 4px 18px rgba(0,0,0,.02);
+  padding: 2.8rem 2.5rem;
+  border: 1px solid var(--border);
+  margin: 0 0 1rem 0;
+  transition: background .3s, border-color .3s;
+}
+
+/* ============================================================
+   COUPLE NAMES
+   Stacks vertically on narrow screens,
+   keeps "&" centered between the two names
+   ============================================================ */
+.names {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 3.4rem;
+  letter-spacing: 2px;
+  color: var(--heading);
+  line-height: 1.15;
+  margin-bottom: .4rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .1em .5em;
+  text-align: center;
+}
+
+.names .amp {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+.names .name-bride,
+.names .name-groom {
+  font-style: normal;
+  color: var(--heading);
+}
+
+/* ---- Subhead ---- */
+.subhead-wrap { text-align: center; }
+.subhead {
+  display: inline-block;
+  font-size: .9rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.8rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: .7rem 1.8rem;
+}
+
+/* ---- Details (Ceremony / Reception) ---- */
+.details {
+  display: flex; flex-wrap: wrap; gap: 2rem;
+  justify-content: center; margin: 2rem 0; text-align: center;
+}
+.detail { flex: 1 1 180px; }
+.detail-label {
+  font-size: .75rem; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--accent);
+  font-weight: 500; margin-bottom: .5rem;
+}
+.detail-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 500;
+  color: var(--heading); line-height: 1.4;
+}
+.detail-value small {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85rem; font-weight: 300;
+  color: var(--muted); display: block; margin-top: .2rem;
+}
+
+.divider {
+  width: 80px; height: 1px;
+  background: var(--border);
+  margin: 1.8rem auto 2rem;
+}
+
+/* ---- Form labels + inputs ---- */
+label {
+  font-size: .75rem; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted);
+  font-weight: 500; padding-left: .2rem;
+  margin-bottom: .4rem; display: block;
+}
+
+/* Shared styling for text AND password inputs */
+input[type=text],
+input[type=password] {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; font-size: .95rem;
+  padding: .9rem 1.2rem;
+  border: 1.5px solid var(--border);
+  border-radius: 48px;
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  transition: all .2s;
+  width: 100%;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.search-section { display: flex; gap: .6rem; flex-wrap: wrap; }
+.search-section input { flex: 1 1 220px; }
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; font-size: .75rem;
+  padding: .9rem 1.8rem;
+  border-radius: 48px;
+  border: 1.5px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-text);
+  cursor: pointer;
+  transition: all .25s;
+}
+.btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.btn-submit {
+  font-size: .85rem; letter-spacing: 2.5px;
+  padding: 1.2rem 2rem; width: 100%; margin-top: 1.2rem;
+}
+
+/* ---- Results ---- */
+.results { margin-top: 1.5rem; display: none; }
+.results.show { display: block; }
+.results-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; color: var(--heading);
+  margin-bottom: .4rem; font-weight: 500;
+}
+.results-sub {
+  font-size: .8rem; color: var(--muted);
+  letter-spacing: .5px; margin-bottom: 1.2rem;
+}
+
+.guest-list { display: flex; flex-direction: column; gap: .7rem; margin-bottom: 1rem; }
+
+.guest-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: .9rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  flex-wrap: wrap;
+  transition: background .3s;
+}
+
+.guest-info { display: flex; flex-direction: column; gap: .15rem; flex: 1 1 180px; }
+.guest-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; color: var(--heading); font-weight: 500;
+}
+.guest-id {
+  font-size: .7rem; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--accent);
+}
+
+.toggle { display: flex; align-items: center; gap: .7rem; cursor: pointer; user-select: none; }
+.toggle input { display: none; }
+.track {
+  position: relative; width: 54px; height: 30px;
+  background: var(--border); border-radius: 30px;
+  transition: background .25s; flex-shrink: 0;
+}
+.track::after {
+  content: ""; position: absolute; top: 3px; left: 3px;
+  width: 24px; height: 24px; background: #fff;
+  border-radius: 50%; transition: transform .25s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+}
+.toggle input:checked + .track { background: var(--toggle-on); }
+.toggle input:checked + .track::after { transform: translateX(24px); }
+
+.toggle-label {
+  font-size: .8rem; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted);
+  font-weight: 500; min-width: 76px;
+}
+.toggle input:checked ~ .toggle-label { color: var(--toggle-on-label); }
+
+/* ---- Messages ---- */
+.msg {
+  text-align: center; font-size: .9rem;
+  padding: .8rem 1.2rem; border-radius: 60px;
+  margin-top: 1rem; display: none;
+}
+.msg.show { display: block; }
+.msg.success { background: var(--success-bg); color: var(--success-text); }
+.msg.error   { background: var(--error-bg);   color: var(--error-text); }
+.msg.info    { background: var(--info-bg);    color: var(--info-text); }
+
+/* ---- Footer ---- */
+.footer {
+  text-align: center; margin-top: 2rem;
+  font-size: .75rem; letter-spacing: 1px;
+  color: var(--accent);
+}
+
+/* ============================================================
+   THEME + BACKGROUND SWITCHER
+   ============================================================ */
+.theme-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem .7rem;
+  margin: 0 auto 1.2rem auto;
+  width: fit-content;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: .5rem .8rem;
+  font-size: .7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+  transition: background .3s, border-color .3s;
+}
+.theme-switcher select {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .75rem;
+  padding: .3rem .5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+}
+
+/* ---- Animated background canvas ---- */
+#bgCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+  display: block;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .names {
+    flex-direction: column;
+    gap: .05em;
+  }
+}
+
+@media (max-width: 600px) {
+  .card { padding: 1.8rem 1.5rem; }
+  .names { font-size: 2.4rem; }
+  .subhead { font-size: .7rem; letter-spacing: 3px; padding: .7rem 1rem; }
+  .detail-value { font-size: 1.2rem; }
+  .theme-switcher { font-size: .6rem; padding: .4rem .6rem; margin-bottom: 1rem; }
+}
+
+/* ============================================================
+   ONE-TIME RSVP LOCK
+   ============================================================ */
+
+.guest-row.locked {
+  opacity: 0.85;
+  background: var(--surface);
+  cursor: default;
+}
+.guest-row.locked .toggle {
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.guest-row.locked .track {
+  filter: grayscale(0.4);
+}
+.guest-row.locked .toggle-label {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.msg.one-time {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  font-size: .85rem;
+  letter-spacing: .3px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 1.2rem;
+}

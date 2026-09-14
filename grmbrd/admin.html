@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ivory">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSVP · Admin</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css?v=2">
+<link rel="stylesheet" href="../themes.css?v=2">
+<link rel="stylesheet" href="./admin.css?v=2">
+</head>
+<body class="admin-body">
+
+<!-- Password gate -->
+<div class="admin-gate" id="adminGate">
+  <div class="admin-gate-box">
+    <h1>Admin Access</h1>
+    <p>Enter the admin password to continue.</p>
+    <input type="password" id="adminPassword" placeholder="Password" autocomplete="off">
+    <button class="btn" id="adminLoginBtn">Enter</button>
+    <div class="msg error" id="adminGateMsg"></div>
+  </div>
+</div>
+
+<!-- Loading overlay -->
+<div class="admin-loading" id="adminLoading" hidden>
+  <div class="admin-loading-spinner"></div>
+</div>
+
+<!-- Admin dashboard -->
+<div class="admin-wrap" id="adminWrap" hidden>
+
+  <header class="admin-header">
+    <div>
+      <h1>RSVP Dashboard</h1>
+      <p class="admin-sub" id="adminSubtitle">Loading…</p>
+    </div>
+    <div class="admin-actions">
+      <button class="btn btn-ghost" id="refreshBtn">Refresh</button>
+      <button class="btn btn-ghost" id="exportBtn">Export CSV</button>
+      <button class="btn btn-ghost" id="logoutBtn">Log out</button>
+    </div>
+  </header>
+
+  <section class="admin-stats" id="adminStats">
+    <div class="stat-card">
+      <div class="stat-label">Total Guests</div>
+      <div class="stat-value" id="statTotal">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Responded</div>
+      <div class="stat-value" id="statResponded">—</div>
+      <div class="stat-note" id="statRespondedPct"></div>
+    </div>
+    <div class="stat-card stat-yes">
+      <div class="stat-label">Attending</div>
+      <div class="stat-value" id="statAttending">—</div>
+    </div>
+    <div class="stat-card stat-no">
+      <div class="stat-label">Not Attending</div>
+      <div class="stat-value" id="statNotAttending">—</div>
+    </div>
+    <div class="stat-card stat-pending">
+      <div class="stat-label">Pending</div>
+      <div class="stat-value" id="statPending">—</div>
+    </div>
+  </section>
+
+  <section class="admin-progress">
+    <div class="admin-progress-bar"><div class="admin-progress-fill" id="progressFill"></div></div>
+  </section>
+
+  <section class="admin-filters">
+    <div class="admin-chips" id="filterChips">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="attending">Attending</button>
+      <button class="chip" data-filter="not-attending">Not Attending</button>
+      <button class="chip" data-filter="pending">Pending</button>
+    </div>
+    <div class="admin-search">
+      <input type="text" id="adminSearch" placeholder="Search by name or Guest ID…" autocomplete="off">
+    </div>
+  </section>
+
+  <section class="admin-table-wrap">
+    <table class="admin-table" id="adminTable">
+      <thead>
+        <tr>
+          <th>Guest ID</th>
+          <th>Guest Name</th>
+          <th>RSVP</th>
+          <th>Responded</th>
+          <th>Responded Date</th>
+        </tr>
+      </thead>
+      <tbody id="adminTableBody">
+        <tr><td colspan="5" class="admin-empty">Loading…</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="admin-footer" id="adminFooter"></footer>
+</div>
+
+<script src="../api.js?v=2"></script>
+<script src="./admin.js?v=2"></script>
+
+</body>
+</html>

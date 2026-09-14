@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ivory">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding · RSVP</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./themes.css">
+</head>
+<body>
+
+<!-- Animated background canvas -->
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+<!-- Page wrapper to keep switcher + card centered together -->
+<div class="page">
+
+  <!-- Theme + background pickers -->
+  <div class="theme-switcher">
+    <label for="themePicker">Theme</label>
+    <select id="themePicker"></select>
+
+    <label for="bgPicker">Background</label>
+    <select id="bgPicker">
+      <option value="particles">Particles</option>
+      <option value="bokeh">Bokeh</option>
+      <option value="snow">Snow</option>
+      <option value="stars">Stars</option>
+      <option value="petals">Petals</option>
+      <option value="waves">Waves</option>
+      <option value="constellation">Constellation</option>
+      <option value="none">None</option>
+    </select>
+  </div>
+
+  <div class="card">
+
+    <!-- Couple names (filled from B2 / B1) -->
+      <h1 class="names" id="coupleNames">
+        <span class="name-bride" data-field="bride">Bride</span>
+        <span class="amp">&amp;</span>
+        <span class="name-groom" data-field="groom">Groom</span>
+      </h1>
+    <div class="subhead-wrap">
+      <div class="subhead" id="weddingDate" data-field="date">Loading…</div>
+    </div>
+
+    <div class="details">
+      <div class="detail">
+        <div class="detail-label">Ceremony</div>
+        <div class="detail-value">
+          <span data-field="church.name">—</span>
+          <small>
+            <span data-field="church.address">—</span><br>
+            <span data-field="church.time">—</span>
+          </small>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">Reception</div>
+        <div class="detail-value">
+          <span data-field="reception.name">—</span>
+          <small>
+            <span data-field="reception.address">—</span><br>
+            <span data-field="reception.time">—</span>
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="searchStep">
+      <label for="searchName">Find your RSVP by full name</label>
+      <div class="search-section">
+        <input type="text" id="searchName" placeholder="e.g. John Doe" autocomplete="off">
+        <button type="button" class="btn" id="searchBtn">Search</button>
+      </div>
+      <div class="msg" id="searchMsg"></div>
+    </div>
+
+    <div class="results" id="results">
+      <div class="results-title">Please confirm attendance for each guest:</div>
+      <div class="results-sub" id="resultsSub"></div>
+      <div class="guest-list" id="guestList"></div>
+      <button type="button" class="btn btn-submit" id="submitBtn">Confirm Attendance</button>
+      <div class="msg" id="submitMsg"></div>
+    </div>
+
+    <!-- ✅ Dynamic footer -->
+    <div class="footer">
+      Kindly respond by <span data-field="rsvpBy">Month xx, 2xxx</span>
+    </div>
+
+  </div>
+</div>
+
+<script src="./background.js"></script>
+<script src="./api.js"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,467 @@
+/* ============================================================
+   50 THEMES — one CSS block per palette
+   Switch with <html data-theme="NAME">
+   ============================================================ */
+
+/* Fallback defaults */
+:root {
+  --bg:#faf7f2; --card:#ffffffec; --surface:#faf7f2;
+  --text:#2c2c2c; --heading:#4a3f35; --muted:#9b8a78;
+  --accent:#b9a48b; --accent-hover:#a08e77; --accent-text:#ffffff;
+  --border:#e5dbd0; --input-bg:#ffffff; --focus-ring:rgba(185,164,139,.15);
+  --dot:#d9cdbc; --shadow:rgba(60,45,30,.15);
+  --toggle-on:#a8bf9c; --toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd; --success-text:#3d5535;
+  --error-bg:#f3e1df;   --error-text:#9b4b42;
+  --info-bg:#f1ebe4;    --info-text:#4a3f35;
+}
+
+/* 01. Ivory */
+[data-theme="ivory"]{
+  --bg:#faf7f2;--card:#ffffffec;--surface:#faf7f2;--text:#2c2c2c;--heading:#4a3f35;--muted:#9b8a78;
+  --accent:#b9a48b;--accent-hover:#a08e77;--accent-text:#fff;--border:#e5dbd0;--input-bg:#fff;
+  --focus-ring:rgba(185,164,139,.15);--dot:#d9cdbc;--shadow:rgba(60,45,30,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f1ebe4;--info-text:#4a3f35;
+}
+
+/* 02. Blush */
+[data-theme="blush"]{
+  --bg:#fdf2f2;--card:#ffffffec;--surface:#fdf2f2;--text:#3a2a2a;--heading:#7a4a4a;--muted:#b08a8a;
+  --accent:#d8a0a0;--accent-hover:#c48a8a;--accent-text:#fff;--border:#f0d9d9;--input-bg:#fff;
+  --focus-ring:rgba(216,160,160,.18);--dot:#e8c8c8;--shadow:rgba(122,74,74,.15);
+  --toggle-on:#c9a7c9;--toggle-on-label:#6b4d6b;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#fae6e6;--info-text:#7a4a4a;
+}
+
+/* 03. Sage */
+[data-theme="sage"]{
+  --bg:#f4f6f1;--card:#ffffffec;--surface:#f4f6f1;--text:#2d3328;--heading:#3f5238;--muted:#889a80;
+  --accent:#9caf88;--accent-hover:#88a074;--accent-text:#fff;--border:#dde5d3;--input-bg:#fff;
+  --focus-ring:rgba(156,175,136,.18);--dot:#cfd9c4;--shadow:rgba(63,82,56,.15);
+  --toggle-on:#8fb87a;--toggle-on-label:#3f5a2c;
+  --success-bg:#dfe9d4;--success-text:#3f5a2c;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e6ecdf;--info-text:#3f5238;
+}
+
+/* 04. Dusty Blue */
+[data-theme="dustyblue"]{
+  --bg:#f2f5f9;--card:#ffffffec;--surface:#f2f5f9;--text:#2a3240;--heading:#3d4a5c;--muted:#7e8ea3;
+  --accent:#7e99b8;--accent-hover:#6784a6;--accent-text:#fff;--border:#d6e0ec;--input-bg:#fff;
+  --focus-ring:rgba(126,153,184,.18);--dot:#c4d2e2;--shadow:rgba(61,74,92,.15);
+  --toggle-on:#7ea8c9;--toggle-on-label:#334f6b;
+  --success-bg:#dfe9d4;--success-text:#3f5a2c;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e2eaf3;--info-text:#3d4a5c;
+}
+
+/* 05. Terracotta */
+[data-theme="terracotta"]{
+  --bg:#fbf4ee;--card:#ffffffec;--surface:#fbf4ee;--text:#3a2e26;--heading:#7a4f38;--muted:#b08c74;
+  --accent:#c97b53;--accent-hover:#b36843;--accent-text:#fff;--border:#edddd0;--input-bg:#fff;
+  --focus-ring:rgba(201,123,83,.18);--dot:#e0c8b6;--shadow:rgba(122,79,56,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f5e2d5;--info-text:#7a4f38;
+}
+
+/* 06. Lavender */
+[data-theme="lavender"]{
+  --bg:#f8f5fb;--card:#ffffffec;--surface:#f8f5fb;--text:#322e3d;--heading:#524a66;--muted:#9488ab;
+  --accent:#a99bd1;--accent-hover:#9486c0;--accent-text:#fff;--border:#e4ddef;--input-bg:#fff;
+  --focus-ring:rgba(169,155,209,.18);--dot:#d6cce8;--shadow:rgba(82,74,102,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#ece5f5;--info-text:#524a66;
+}
+
+/* 07. Champagne */
+[data-theme="champagne"]{
+  --bg:#fdfaf3;--card:#ffffffec;--surface:#fdfaf3;--text:#3a3428;--heading:#6b5d3d;--muted:#b3a17a;
+  --accent:#c9b384;--accent-hover:#b39e6d;--accent-text:#fff;--border:#ede2cb;--input-bg:#fff;
+  --focus-ring:rgba(201,179,132,.18);--dot:#e2d4b5;--shadow:rgba(107,93,61,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f5ecd7;--info-text:#6b5d3d;
+}
+
+/* 08. Navy & Gold */
+[data-theme="navygold"]{
+  --bg:#0e1a2b;--card:#16263de6;--surface:#1c2f4a;--text:#e8e3d6;--heading:#f0dfa8;--muted:#a89968;
+  --accent:#d4af37;--accent-hover:#b8952b;--accent-text:#0e1a2b;--border:#2a3d5c;--input-bg:#1c2f4a;
+  --focus-ring:rgba(212,175,55,.25);--dot:#2a3d5c;--shadow:rgba(0,0,0,.4);
+  --toggle-on:#d4af37;--toggle-on-label:#f0dfa8;
+  --success-bg:#1f3a2c;--success-text:#a8d5b0;--error-bg:#3a1f1f;--error-text:#e8b0b0;--info-bg:#1c2f4a;--info-text:#e8e3d6;
+}
+
+/* 09. Emerald */
+[data-theme="emerald"]{
+  --bg:#f2f8f4;--card:#ffffffec;--surface:#f2f8f4;--text:#1f2e26;--heading:#1e5c3f;--muted:#6b8f7a;
+  --accent:#2e8b57;--accent-hover:#237447;--accent-text:#fff;--border:#cfe4d6;--input-bg:#fff;
+  --focus-ring:rgba(46,139,87,.18);--dot:#bcd9c7;--shadow:rgba(30,92,63,.15);
+  --toggle-on:#2e8b57;--toggle-on-label:#1e5c3f;
+  --success-bg:#d7ecdf;--success-text:#1e5c3f;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#dcefe4;--info-text:#1e5c3f;
+}
+
+/* 10. Burgundy */
+[data-theme="burgundy"]{
+  --bg:#fbf3f3;--card:#ffffffec;--surface:#fbf3f3;--text:#331f22;--heading:#6b1f2c;--muted:#9b7078;
+  --accent:#8b2635;--accent-hover:#731f2c;--accent-text:#fff;--border:#edd5d9;--input-bg:#fff;
+  --focus-ring:rgba(139,38,53,.18);--dot:#e0c0c7;--shadow:rgba(107,31,44,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f5dfe3;--info-text:#6b1f2c;
+}
+
+/* 11. Slate */
+[data-theme="slate"]{
+  --bg:#f4f6f8;--card:#ffffffec;--surface:#f4f6f8;--text:#2a3138;--heading:#3d4752;--muted:#7d8a96;
+  --accent:#64748b;--accent-hover:#526075;--accent-text:#fff;--border:#dbe1e8;--input-bg:#fff;
+  --focus-ring:rgba(100,116,139,.18);--dot:#c9d1da;--shadow:rgba(61,71,82,.15);
+  --toggle-on:#7ea8c9;--toggle-on-label:#334f6b;
+  --success-bg:#dfe9d4;--success-text:#3f5a2c;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e2eaf3;--info-text:#3d4752;
+}
+
+/* 12. Rose Gold */
+[data-theme="rosegold"]{
+  --bg:#fdf4f0;--card:#ffffffec;--surface:#fdf4f0;--text:#3a2a28;--heading:#7a4a44;--muted:#b38a82;
+  --accent:#c9917e;--accent-hover:#b37c6a;--accent-text:#fff;--border:#f0d9d0;--input-bg:#fff;
+  --focus-ring:rgba(201,145,126,.18);--dot:#e5c8bd;--shadow:rgba(122,74,68,.15);
+  --toggle-on:#c9a7c9;--toggle-on-label:#6b4d6b;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f8e2da;--info-text:#7a4a44;
+}
+
+/* 13. Mint */
+[data-theme="mint"]{
+  --bg:#f0faf6;--card:#ffffffec;--surface:#f0faf6;--text:#1e3329;--heading:#2d6a52;--muted:#6b9a86;
+  --accent:#4ab88a;--accent-hover:#3aa376;--accent-text:#fff;--border:#cbe8db;--input-bg:#fff;
+  --focus-ring:rgba(74,184,138,.18);--dot:#b8dfce;--shadow:rgba(45,106,82,.15);
+  --toggle-on:#4ab88a;--toggle-on-label:#2d6a52;
+  --success-bg:#d5efe1;--success-text:#2d6a52;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#ddf0e7;--info-text:#2d6a52;
+}
+
+/* 14. Midnight */
+[data-theme="midnight"]{
+  --bg:#0f1116;--card:#1a1d26e6;--surface:#20242f;--text:#d8dce6;--heading:#e6e9f2;--muted:#8a90a0;
+  --accent:#7c8cf8;--accent-hover:#6779e8;--accent-text:#fff;--border:#2a2f3c;--input-bg:#20242f;
+  --focus-ring:rgba(124,140,248,.25);--dot:#2a2f3c;--shadow:rgba(0,0,0,.5);
+  --toggle-on:#7c8cf8;--toggle-on-label:#b4bffa;
+  --success-bg:#1f3a2c;--success-text:#a8d5b0;--error-bg:#3a1f1f;--error-text:#e8b0b0;--info-bg:#20242f;--info-text:#d8dce6;
+}
+
+/* 15. Peach */
+[data-theme="peach"]{
+  --bg:#fff6ef;--card:#ffffffec;--surface:#fff6ef;--text:#3a2c22;--heading:#8b5a3c;--muted:#b39078;
+  --accent:#e89a6a;--accent-hover:#d18655;--accent-text:#fff;--border:#f2ddc8;--input-bg:#fff;
+  --focus-ring:rgba(232,154,106,.18);--dot:#e8ccb0;--shadow:rgba(139,90,60,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#fae4d0;--info-text:#8b5a3c;
+}
+
+/* 16. Charcoal */
+[data-theme="charcoal"]{
+  --bg:#1a1a1a;--card:#262626e6;--surface:#2e2e2e;--text:#e0e0e0;--heading:#f0f0f0;--muted:#909090;
+  --accent:#b8b8b8;--accent-hover:#a0a0a0;--accent-text:#1a1a1a;--border:#383838;--input-bg:#2e2e2e;
+  --focus-ring:rgba(184,184,184,.25);--dot:#383838;--shadow:rgba(0,0,0,.5);
+  --toggle-on:#b8b8b8;--toggle-on-label:#e0e0e0;
+  --success-bg:#1f3a2c;--success-text:#a8d5b0;--error-bg:#3a1f1f;--error-text:#e8b0b0;--info-bg:#2e2e2e;--info-text:#e0e0e0;
+}
+
+/* 17. Sky */
+[data-theme="sky"]{
+  --bg:#f0f8fd;--card:#ffffffec;--surface:#f0f8fd;--text:#1e2f3d;--heading:#2c5a7a;--muted:#6b8fa8;
+  --accent:#5ba8d9;--accent-hover:#4493c4;--accent-text:#fff;--border:#cfe5f2;--input-bg:#fff;
+  --focus-ring:rgba(91,168,217,.18);--dot:#b8d8ec;--shadow:rgba(44,90,122,.15);
+  --toggle-on:#5ba8d9;--toggle-on-label:#2c5a7a;
+  --success-bg:#d5e8f5;--success-text:#2c5a7a;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#ddeaf5;--info-text:#2c5a7a;
+}
+
+/* 18. Plum */
+[data-theme="plum"]{
+  --bg:#f9f2f7;--card:#ffffffec;--surface:#f9f2f7;--text:#32202d;--heading:#5c2e4a;--muted:#98788a;
+  --accent:#8b4a72;--accent-hover:#743b5f;--accent-text:#fff;--border:#ecd5e2;--input-bg:#fff;
+  --focus-ring:rgba(139,74,114,.18);--dot:#e0c2d4;--shadow:rgba(92,46,74,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f0dcea;--info-text:#5c2e4a;
+}
+
+/* 19. Sand */
+[data-theme="sand"]{
+  --bg:#f9f5ec;--card:#ffffffec;--surface:#f9f5ec;--text:#3a3428;--heading:#6b5d3d;--muted:#a89878;
+  --accent:#c9b284;--accent-hover:#b39e6d;--accent-text:#fff;--border:#e8dcc4;--input-bg:#fff;
+  --focus-ring:rgba(201,178,132,.18);--dot:#dccbaa;--shadow:rgba(107,93,61,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f0e6ce;--info-text:#6b5d3d;
+}
+
+/* 20. Ocean */
+[data-theme="ocean"]{
+  --bg:#eef6f7;--card:#ffffffec;--surface:#eef6f7;--text:#1d3238;--heading:#1e5a6b;--muted:#6b929c;
+  --accent:#2e8fa3;--accent-hover:#237a8c;--accent-text:#fff;--border:#cbe2e8;--input-bg:#fff;
+  --focus-ring:rgba(46,143,163,.18);--dot:#b8d6dd;--shadow:rgba(30,90,107,.15);
+  --toggle-on:#2e8fa3;--toggle-on-label:#1e5a6b;
+  --success-bg:#d5efe1;--success-text:#2d6a52;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#dceef1;--info-text:#1e5a6b;
+}
+
+/* 21. Coral */
+[data-theme="coral"]{
+  --bg:#fff3ee;--card:#ffffffec;--surface:#fff3ee;--text:#3a2420;--heading:#7a3a2a;--muted:#b38070;
+  --accent:#e87455;--accent-hover:#d35d3e;--accent-text:#fff;--border:#f2d5c8;--input-bg:#fff;
+  --focus-ring:rgba(232,116,85,.18);--dot:#e8c0b0;--shadow:rgba(122,58,42,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#fae4d8;--info-text:#7a3a2a;
+}
+
+/* 22. Teal */
+[data-theme="teal"]{
+  --bg:#eef7f6;--card:#ffffffec;--surface:#eef7f6;--text:#1c3330;--heading:#1e5a52;--muted:#6b948d;
+  --accent:#2e9b8f;--accent-hover:#23857a;--accent-text:#fff;--border:#cbe5e0;--input-bg:#fff;
+  --focus-ring:rgba(46,155,143,.18);--dot:#b8d9d3;--shadow:rgba(30,90,82,.15);
+  --toggle-on:#2e9b8f;--toggle-on-label:#1e5a52;
+  --success-bg:#d5efe1;--success-text:#2d6a52;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#dceeeb;--info-text:#1e5a52;
+}
+
+/* 23. Mustard */
+[data-theme="mustard"]{
+  --bg:#fdf8ec;--card:#ffffffec;--surface:#fdf8ec;--text:#38301a;--heading:#6b5a1a;--muted:#a89464;
+  --accent:#c9a227;--accent-hover:#b38f1c;--accent-text:#fff;--border:#ece0b8;--input-bg:#fff;
+  --focus-ring:rgba(201,162,39,.18);--dot:#e0d19c;--shadow:rgba(107,90,26,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f5eccf;--info-text:#6b5a1a;
+}
+
+/* 24. Olive */
+[data-theme="olive"]{
+  --bg:#f5f6ec;--card:#ffffffec;--surface:#f5f6ec;--text:#2e311a;--heading:#4f5724;--muted:#8a8f5e;
+  --accent:#7a8b3a;--accent-hover:#68772f;--accent-text:#fff;--border:#dfe3c4;--input-bg:#fff;
+  --focus-ring:rgba(122,139,58,.18);--dot:#ced4a8;--shadow:rgba(79,87,36,.15);
+  --toggle-on:#7a8b3a;--toggle-on-label:#4f5724;
+  --success-bg:#e3ecce;--success-text:#4f5724;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#eaf0d5;--info-text:#4f5724;
+}
+
+/* 25. Mauve */
+[data-theme="mauve"]{
+  --bg:#faf5f8;--card:#ffffffec;--surface:#faf5f8;--text:#322530;--heading:#5c2e54;--muted:#96748e;
+  --accent:#b07aa3;--accent-hover:#9a658d;--accent-text:#fff;--border:#ecd9e6;--input-bg:#fff;
+  --focus-ring:rgba(176,122,163,.18);--dot:#e0c6d6;--shadow:rgba(92,46,84,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f2dfeb;--info-text:#5c2e54;
+}
+
+/* 26. Forest */
+[data-theme="forest"]{
+  --bg:#f1f5ef;--card:#ffffffec;--surface:#f1f5ef;--text:#1d2a1e;--heading:#2d4a2d;--muted:#6e8570;
+  --accent:#3a6b3c;--accent-hover:#2e552f;--accent-text:#fff;--border:#cfe0cf;--input-bg:#fff;
+  --focus-ring:rgba(58,107,60,.18);--dot:#bcd4bc;--shadow:rgba(45,74,45,.15);
+  --toggle-on:#3a6b3c;--toggle-on-label:#2d4a2d;
+  --success-bg:#d7e8d8;--success-text:#2d4a2d;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#ddeadd;--info-text:#2d4a2d;
+}
+
+/* 27. Wine */
+[data-theme="wine"]{
+  --bg:#f7f0f2;--card:#ffffffec;--surface:#f7f0f2;--text:#2f1a20;--heading:#5c1e2c;--muted:#946b76;
+  --accent:#7a1f38;--accent-hover:#66192e;--accent-text:#fff;--border:#e8d1d8;--input-bg:#fff;
+  --focus-ring:rgba(122,31,56,.18);--dot:#dcc0c8;--shadow:rgba(92,30,44,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f0d9e0;--info-text:#5c1e2c;
+}
+
+/* 28. Cocoa */
+[data-theme="cocoa"]{
+  --bg:#f7f2ec;--card:#ffffffec;--surface:#f7f2ec;--text:#33261e;--heading:#5c3f28;--muted:#957a64;
+  --accent:#8b5e3c;--accent-hover:#754d30;--accent-text:#fff;--border:#e3d4c4;--input-bg:#fff;
+  --focus-ring:rgba(139,94,60,.18);--dot:#d4c0a8;--shadow:rgba(92,63,40,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#eddfd0;--info-text:#5c3f28;
+}
+
+/* 29. Stone */
+[data-theme="stone"]{
+  --bg:#f4f3f0;--card:#ffffffec;--surface:#f4f3f0;--text:#2e2c28;--heading:#4f4a42;--muted:#8a857a;
+  --accent:#7a746a;--accent-hover:#66605a;--accent-text:#fff;--border:#ded9cf;--input-bg:#fff;
+  --focus-ring:rgba(122,116,106,.18);--dot:#cbc5ba;--shadow:rgba(79,74,66,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e8e3da;--info-text:#4f4a42;
+}
+
+/* 30. Cloud */
+[data-theme="cloud"]{
+  --bg:#f6f8fa;--card:#ffffffec;--surface:#f6f8fa;--text:#2a323a;--heading:#46515c;--muted:#8894a0;
+  --accent:#93a3b3;--accent-hover:#7d8ea0;--accent-text:#fff;--border:#dce3ea;--input-bg:#fff;
+  --focus-ring:rgba(147,163,179,.18);--dot:#cdd6de;--shadow:rgba(70,81,92,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e4ebf1;--info-text:#46515c;
+}
+
+/* 31. Honey */
+[data-theme="honey"]{
+  --bg:#fdf6e8;--card:#ffffffec;--surface:#fdf6e8;--text:#3a2f18;--heading:#7a5c1a;--muted:#b39a64;
+  --accent:#d99b2b;--accent-hover:#c2881f;--accent-text:#fff;--border:#ecdcb8;--input-bg:#fff;
+  --focus-ring:rgba(217,155,43,.18);--dot:#e0cc9c;--shadow:rgba(122,92,26,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f5e7c9;--info-text:#7a5c1a;
+}
+
+/* 32. Denim */
+[data-theme="denim"]{
+  --bg:#f0f4f8;--card:#ffffffec;--surface:#f0f4f8;--text:#1f2a36;--heading:#2c425c;--muted:#6b7f96;
+  --accent:#3f6490;--accent-hover:#33547a;--accent-text:#fff;--border:#cdd9e5;--input-bg:#fff;
+  --focus-ring:rgba(63,100,144,.18);--dot:#b8c7d8;--shadow:rgba(44,66,92,.15);
+  --toggle-on:#3f6490;--toggle-on-label:#2c425c;
+  --success-bg:#dfe9d4;--success-text:#3f5a2c;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#dce5ef;--info-text:#2c425c;
+}
+
+/* 33. Moss */
+[data-theme="moss"]{
+  --bg:#f2f5ef;--card:#ffffffec;--surface:#f2f5ef;--text:#262b1e;--heading:#3f4a2c;--muted:#788a5c;
+  --accent:#5c7a3a;--accent-hover:#4d662f;--accent-text:#fff;--border:#d4ddc4;--input-bg:#fff;
+  --focus-ring:rgba(92,122,58,.18);--dot:#c2cfae;--shadow:rgba(63,74,44,.15);
+  --toggle-on:#5c7a3a;--toggle-on-label:#3f4a2c;
+  --success-bg:#dbe7cb;--success-text:#3f4a2c;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e2ead3;--info-text:#3f4a2c;
+}
+
+/* 34. Clay */
+[data-theme="clay"]{
+  --bg:#faf3ee;--card:#ffffffec;--surface:#faf3ee;--text:#382b24;--heading:#6b4638;--muted:#a88878;
+  --accent:#b37560;--accent-hover:#9c604c;--accent-text:#fff;--border:#e8d5c8;--input-bg:#fff;
+  --focus-ring:rgba(179,117,96,.18);--dot:#dcc2b0;--shadow:rgba(107,70,56,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#eddcd0;--info-text:#6b4638;
+}
+
+/* 35. Indigo */
+[data-theme="indigo"]{
+  --bg:#f2f2fa;--card:#ffffffec;--surface:#f2f2fa;--text:#24243a;--heading:#35356b;--muted:#7c7cb3;
+  --accent:#5454b3;--accent-hover:#434399;--accent-text:#fff;--border:#d6d6ef;--input-bg:#fff;
+  --focus-ring:rgba(84,84,179,.18);--dot:#c4c4e0;--shadow:rgba(53,53,107,.15);
+  --toggle-on:#5454b3;--toggle-on-label:#35356b;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e0e0f2;--info-text:#35356b;
+}
+
+/* 36. Salmon */
+[data-theme="salmon"]{
+  --bg:#fdf4f0;--card:#ffffffec;--surface:#fdf4f0;--text:#3a2624;--heading:#7a4438;--muted:#b38a80;
+  --accent:#e8876a;--accent-hover:#d37054;--accent-text:#fff;--border:#f2d6cb;--input-bg:#fff;
+  --focus-ring:rgba(232,135,106,.18);--dot:#e8c4b6;--shadow:rgba(122,68,56,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f8e0d5;--info-text:#7a4438;
+}
+
+/* 37. Pistachio */
+[data-theme="pistachio"]{
+  --bg:#f5f8ef;--card:#ffffffec;--surface:#f5f8ef;--text:#2c331c;--heading:#4f5c24;--muted:#889560;
+  --accent:#8fb344;--accent-hover:#7a9c34;--accent-text:#fff;--border:#dde6c4;--input-bg:#fff;
+  --focus-ring:rgba(143,179,68,.18);--dot:#cbd8a8;--shadow:rgba(79,92,36,.15);
+  --toggle-on:#8fb344;--toggle-on-label:#4f5c24;
+  --success-bg:#e0ead0;--success-text:#4f5c24;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e7eed8;--info-text:#4f5c24;
+}
+
+/* 38. Plum2 (deep violet) */
+[data-theme="plum2"]{
+  --bg:#f4f0f8;--card:#ffffffec;--surface:#f4f0f8;--text:#2a2038;--heading:#4a2e6b;--muted:#8a78a8;
+  --accent:#6b3fa0;--accent-hover:#583088;--accent-text:#fff;--border:#dccde8;--input-bg:#fff;
+  --focus-ring:rgba(107,63,160,.18);--dot:#cbbce0;--shadow:rgba(74,46,107,.15);
+  --toggle-on:#6b3fa0;--toggle-on-label:#4a2e6b;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e4d9ef;--info-text:#4a2e6b;
+}
+
+/* 39. Greige */
+[data-theme="greige"]{
+  --bg:#f5f3ef;--card:#ffffffec;--surface:#f5f3ef;--text:#2e2b26;--heading:#4d473e;--muted:#8a8278;
+  --accent:#a39482;--accent-hover:#8c7d6b;--accent-text:#fff;--border:#ded7cb;--input-bg:#fff;
+  --focus-ring:rgba(163,148,130,.18);--dot:#cec5b5;--shadow:rgba(77,71,62,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#e9e2d6;--info-text:#4d473e;
+}
+
+/* 40. Onyx */
+[data-theme="onyx"]{
+  --bg:#0d0d0d;--card:#1a1a1ae6;--surface:#222222;--text:#dcdcdc;--heading:#f5f5f5;--muted:#8a8a8a;
+  --accent:#c9a45b;--accent-hover:#b08d45;--accent-text:#0d0d0d;--border:#333333;--input-bg:#222222;
+  --focus-ring:rgba(201,164,91,.25);--dot:#333333;--shadow:rgba(0,0,0,.6);
+  --toggle-on:#c9a45b;--toggle-on-label:#f0dca8;
+  --success-bg:#1f3a2c;--success-text:#a8d5b0;--error-bg:#3a1f1f;--error-text:#e8b0b0;--info-bg:#222222;--info-text:#dcdcdc;
+}
+
+/* 41. Sunset */
+[data-theme="sunset"]{
+  --bg:#fff3ec;--card:#ffffffec;--surface:#fff3ec;--text:#3a2420;--heading:#7a3828;--muted:#b38270;
+  --accent:#e86a3f;--accent-hover:#d3562d;--accent-text:#fff;--border:#f2d0c0;--input-bg:#fff;
+  --focus-ring:rgba(232,106,63,.18);--dot:#e8c0a8;--shadow:rgba(122,56,40,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#fae0d0;--info-text:#7a3828;
+}
+
+/* 42. Lagoon */
+[data-theme="lagoon"]{
+  --bg:#eef7f8;--card:#ffffffec;--surface:#eef7f8;--text:#173238;--heading:#1c5a64;--muted:#6b929a;
+  --accent:#2094a3;--accent-hover:#1a7e8c;--accent-text:#fff;--border:#c8e2e6;--input-bg:#fff;
+  --focus-ring:rgba(32,148,163,.18);--dot:#b4d6dc;--shadow:rgba(28,90,100,.15);
+  --toggle-on:#2094a3;--toggle-on-label:#1c5a64;
+  --success-bg:#d5efe1;--success-text:#2d6a52;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#d9eef2;--info-text:#1c5a64;
+}
+
+/* 43. Wheat */
+[data-theme="wheat"]{
+  --bg:#fdf8ef;--card:#ffffffec;--surface:#fdf8ef;--text:#3a3324;--heading:#6b5c34;--muted:#b3a17a;
+  --accent:#c9a862;--accent-hover:#b39549;--accent-text:#fff;--border:#ece0c8;--input-bg:#fff;
+  --focus-ring:rgba(201,168,98,.18);--dot:#e0d0a8;--shadow:rgba(107,92,52,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f5e9d3;--info-text:#6b5c34;
+}
+
+/* 44. Fern */
+[data-theme="fern"]{
+  --bg:#f1f6ee;--card:#ffffffec;--surface:#f1f6ee;--text:#1e2b1a;--heading:#2e4a26;--muted:#6e8a60;
+  --accent:#4a7a3a;--accent-hover:#3d662f;--accent-text:#fff;--border:#d0e0c4;--input-bg:#fff;
+  --focus-ring:rgba(74,122,58,.18);--dot:#bcd4ae;--shadow:rgba(46,74,38,.15);
+  --toggle-on:#4a7a3a;--toggle-on-label:#2e4a26;
+  --success-bg:#d7e8cb;--success-text:#2e4a26;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#deead3;--info-text:#2e4a26;
+}
+
+/* 45. Brick */
+[data-theme="brick"]{
+  --bg:#faf0ee;--card:#ffffffec;--surface:#faf0ee;--text:#33211e;--heading:#6b2e22;--muted:#9b6b60;
+  --accent:#a8442e;--accent-hover:#8f3824;--accent-text:#fff;--border:#e8ccc4;--input-bg:#fff;
+  --focus-ring:rgba(168,68,46,.18);--dot:#dcb8ae;--shadow:rgba(107,46,34,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f0d8d2;--info-text:#6b2e22;
+}
+
+/* 46. Orchid */
+[data-theme="orchid"]{
+  --bg:#fbf3f8;--card:#ffffffec;--surface:#fbf3f8;--text:#32222f;--heading:#5c2a54;--muted:#96708c;
+  --accent:#b852a6;--accent-hover:#a0418f;--accent-text:#fff;--border:#ecd2e5;--input-bg:#fff;
+  --focus-ring:rgba(184,82,166,.18);--dot:#e0c0d8;--shadow:rgba(92,42,84,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#f2daea;--info-text:#5c2a54;
+}
+
+/* 47. Graphite */
+[data-theme="graphite"]{
+  --bg:#1c1f24;--card:#282c33e6;--surface:#2f343c;--text:#dcdfe5;--heading:#f0f2f7;--muted:#8a90a0;
+  --accent:#8f9bb3;--accent-hover:#7a869e;--accent-text:#1c1f24;--border:#3a404a;--input-bg:#2f343c;
+  --focus-ring:rgba(143,155,179,.25);--dot:#3a404a;--shadow:rgba(0,0,0,.55);
+  --toggle-on:#8f9bb3;--toggle-on-label:#dce2ec;
+  --success-bg:#1f3a2c;--success-text:#a8d5b0;--error-bg:#3a1f1f;--error-text:#e8b0b0;--info-bg:#2f343c;--info-text:#dcdfe5;
+}
+
+/* 48. Linen */
+[data-theme="linen"]{
+  --bg:#f7f4ee;--card:#ffffffec;--surface:#f7f4ee;--text:#2e2a22;--heading:#4d4536;--muted:#8a8070;
+  --accent:#b8a890;--accent-hover:#a29278;--accent-text:#fff;--border:#e2d9c8;--input-bg:#fff;
+  --focus-ring:rgba(184,168,144,.18);--dot:#d4c8b2;--shadow:rgba(77,69,54,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#ebe2d3;--info-text:#4d4536;
+}
+
+/* 49. Pearl */
+[data-theme="pearl"]{
+  --bg:#fafafa;--card:#ffffffec;--surface:#f4f4f6;--text:#2c2c30;--heading:#46464d;--muted:#8a8a92;
+  --accent:#c8c8ce;--accent-hover:#b0b0b8;--accent-text:#2c2c30;--border:#e6e6ea;--input-bg:#fff;
+  --focus-ring:rgba(200,200,206,.25);--dot:#dcdce2;--shadow:rgba(70,70,77,.12);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#ececef;--info-text:#46464d;
+}
+
+/* 50. Rosewood */
+[data-theme="rosewood"]{
+  --bg:#f8f0f0;--card:#ffffffec;--surface:#f8f0f0;--text:#2e1f22;--heading:#5c2e34;--muted:#94707a;
+  --accent:#8b4a55;--accent-hover:#753b46;--accent-text:#fff;--border:#e5ccd0;--input-bg:#fff;
+  --focus-ring:rgba(139,74,85,.18);--dot:#d8b8be;--shadow:rgba(92,46,52,.15);
+  --toggle-on:#a8bf9c;--toggle-on-label:#4d6b3f;
+  --success-bg:#e3e9dd;--success-text:#3d5535;--error-bg:#f3e1df;--error-text:#9b4b42;--info-bg:#eed9dc;--info-text:#5c2e34;
+}
